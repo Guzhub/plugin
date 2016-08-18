@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="signature.js"></script>
+    <script src="plugin.js"></script>
+    <script>
+        (function($){
+            $(document).ready(function(){
+                var plugin = new Plugin(true);
+                plugin.init();
+            });
+        })(jQuery);
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img class="header__logo" src="./logo.svg" alt="Oracle logo">
+    </div>
+    <h1>OFSC Sample Plugin</h1>
+    <div class="content">
+        <div class="section section__local-storage">
+            <h2>Local Storage</h2>
+            <button class="button json_local_storage_toggle" type="button">View Local Storage</button>
+            <div class="json json__local-storage"></div>
+        </div>
+        <div class="section section__ofsc-data">
+            <h2>OFSC Data</h2>
+            <div>
+                <button class="button json_request_toggle" type="button">View received JSON</button>
+                <button class="button json_response_toggle" type="button">Edit JSON to send</button>
+            </div>
+            <div class="json json__request"></div>
+            <div class="json json__response" contenteditable></div>
+            <div>
+                <button class="button submit" type="button">Submit</button>
+                <div class="back_method">and go to
+                    <select class="back_method_select" title="Redirect to screen after submit">
+                        <option value="default">Previous screen</option>
+                        <option value="activity_by_id">Activity #</option>
+                        <option value="next_activity">Next pending Activity</option>
+                        <option value="activity_list">Activity List</option>
+                    </select>
+                    <input class="back_activity_id" type="text" title="Activity ID" placeholder="Activity ID">
+                </div>
+            </div>
+            <div class="form"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+# 1
+
+CACHE:
+./index.html
+./style.css
+./plugin.js
+./signature.js
+./logo.svg
+./item.png
+./items.png
+//code.jquery.com/jquery-2.1.4.min.js
+
+FALLBACK:
+
+NETWORK:
+*
